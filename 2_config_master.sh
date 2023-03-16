@@ -17,6 +17,7 @@ tar -zxvf helm-v3.11.2-linux-amd64.tar.gz
 sudo mv linux-amd64/helm /usr/local/bin/helm
 
 #Install and Configure Metallb
-kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.9/config/manifests/metallb-native.yaml
+kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.12.1/manifests/namespace.yaml
+kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.12.1/manifests/metallb.yaml
 kubectl apply -f metallb-config.yaml
 
