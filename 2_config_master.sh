@@ -19,3 +19,4 @@ sudo mv linux-amd64/helm /usr/local/bin/helm
 #Install and Configure Metallb
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.9/config/manifests/metallb-native.yaml
 kubectl apply -f metallb-config.yaml
+
