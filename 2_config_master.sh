@@ -1,6 +1,6 @@
 
 #Run on masters Only
-sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-cert-extra-sans=nsx-k8s-master.example.com --kubernetes-version 1.24.11
+sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-cert-extra-sans=k8s-master.example.com --kubernetes-version 1.24.11
 
 mkdir -p $HOME/.kube
 sudo cp -f /etc/kubernetes/admin.conf $HOME/.kube/config
