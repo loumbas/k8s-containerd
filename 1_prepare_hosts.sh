@@ -1,3 +1,4 @@
+#Run on all hosts Master, Workers,NFS
 # Disable swap
 sudo swapoff -a
 sudo sed -ri '/\sswap\s/s/^#?/#/' /etc/fstab
@@ -11,10 +12,10 @@ sudo systemctl disable --now unattended-upgrades.service
 
 # Add FQDNs to /etc/hosts
 sudo sh -c 'echo "xx.xx.xx.xx k8s-master.example.com k8s-master" >> /etc/hosts'
-sudo sh -c 'echo "xx.xx.xx.xx nsx-k8s-worker1.example.com k8s-worker1" >> /etc/hosts'
-sudo sh -c 'echo "xx.xx.xx.xx nsx-k8s-worker2.example.com k8s-worker2" >> /etc/hosts'
-sudo sh -c 'echo "xx.xx.xx.xx nsx-k8s-worker3.example.com k8s-worker3" >> /etc/hosts'
-sudo sh -c 'echo "xx.xx.xx.xx nsx-k8s-nfs.example.com k8s-nfs" >> /etc/hosts'
+sudo sh -c 'echo "xx.xx.xx.xx k8s-worker1.example.com k8s-worker1" >> /etc/hosts'
+sudo sh -c 'echo "xx.xx.xx.xx k8s-worker2.example.com k8s-worker2" >> /etc/hosts'
+sudo sh -c 'echo "xx.xx.xx.xx k8s-worker3.example.com k8s-worker3" >> /etc/hosts'
+sudo sh -c 'echo "xx.xx.xx.xx k8s-nfs.example.com k8s-nfs" >> /etc/hosts'
 
 
 #Disable IPv6
