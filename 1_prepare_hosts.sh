@@ -4,11 +4,12 @@ sudo swapoff -a
 sudo sed -ri '/\sswap\s/s/^#?/#/' /etc/fstab
 
 # Set NTP
-sudo sh -c 'echo "NTP=ntp_server" >> /etc/systemd/timesyncd.conf'
+sudo sh -c 'echo "NTP=NTP=192.168.184.160" >> /etc/systemd/timesyncd.conf'
 sudo systemctl restart systemd-timesyncd 
 
 # Disable automatic updates on Ubuntu
 sudo systemctl disable --now unattended-upgrades.service
+sudo dpkg-reconfigure unattended-upgrades
 
 # Add FQDNs to /etc/hosts
 sudo sh -c 'echo "xx.xx.xx.xx k8s-master.example.com k8s-master" >> /etc/hosts'
